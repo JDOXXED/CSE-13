@@ -4,7 +4,13 @@
 
 char lockerState(int l, int t) {
   /* TODO: This should compute the state of locker l after t students have done their toggling. If the locker is open, return 1. If the locker is closed, return 0. */
-
+  int state = 0;
+  for (int i = 1; i <= t;i++){
+    if(l % i == 0){
+      state = !state;
+    }
+  }
+  return state;
 }
 
 int main(int argc, char* argv[]) {
