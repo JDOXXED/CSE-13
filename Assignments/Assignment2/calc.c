@@ -15,25 +15,25 @@ int main() {
 
         switch(choice){
             case 1:
-                printf("Enter two integers: ");
+                printf("Please Enter two integers: ");
                 scanf("%d %d", &num1, &num2);
                 result = num1 + num2;
                 printf("Result: %d + %d = %.2f\n", num1, num2, result);
                 break;
             case 2:
-                printf("Enter two integers: ");
+                printf("Please enter two integers:");
                 scanf("%d %d", &num1, &num2);
                 result = num1 - num2;
                 printf("Result: %d - %d = %.2f\n", num1, num2, result);
                 break;
             case 3:
-                printf("Enter two integers: ");
+                printf("Please enter two integers:");
                 scanf("%d %d", &num1, &num2);
                 result = num1 * num2;
                 printf("Result: %d * %d = %.2f\n", num1, num2, result);
                 break;
             case 4:
-                printf("Enter two integers: ");
+                printf("Please enter two integers:");
                 scanf("%d %d", &num1, &num2);
                 if (num2 != 0) {
                     result = (float)num1 / num2;
@@ -43,7 +43,7 @@ int main() {
                 }
                 break;
             case 5:
-                printf("Enter two integers: ");
+                printf("Please enter two integers:");
                 scanf("%d %d", &num1, &num2);
                 if (num2 != 0) {
                     result = num1 % num2;
