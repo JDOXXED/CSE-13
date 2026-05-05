@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <ctype.h>
+
 #include <string.h>
+#include <ctype.h>
 
 int main() {
     char str[101];
