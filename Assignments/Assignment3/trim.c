@@ -16,7 +16,7 @@ void trim(char s[]) {
     int lastc = 0;
 
     for (int i = 0; i < strlen(s); i++){
-        if (isalnum(s[i])){
+        if (isalnum(s[i]) || s[i] == '!'){
             lastc = i;
         }
     }

@@ -40,6 +40,8 @@ int main() {
         }
 
         //for each entry of output matrix
+        //a is n * m, b is p * q, c is n * q
+
         for (int i = 0; i < n; i++){
             for (int j = 0; j < q; j++){
                 int sum = 0;
@@ -60,8 +62,7 @@ int main() {
         pmatrix(p,q,b);
         
         printf("Matrix c:\n");
-        pmatrix(n,q,a);
-        
+        pmatrix(n,q,c);
     }
 
     return 0;

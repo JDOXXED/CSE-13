@@ -17,11 +17,14 @@ int main(){
         int msd = getMSDigit(num);
         freq[msd]++;
     }
-
-    printf("\n");
+    
 
     for (int i = 0; i < 10; i++){
-        printf("%d:%d ", i, freq[i]);
+        if (i == 9){
+            printf("%d:%d", i, freq[i]);
+        } else {
+            printf("%d:%d ", i, freq[i]);
+        }
     }
     printf("\n");
 
