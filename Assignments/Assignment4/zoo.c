@@ -13,12 +13,24 @@ typedef struct {
 int has_b(const char *s) {
     /* TODO: Return true (1) if the name s has the character 'b' in it. Otherwise, return false (0). 
              The strchr() function may come in handy. Use the man page to understand how it works. */
-    
+    if (strchr(s, 'b') != NULL){
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 int should_keep(Animal *a) {
     /* TODO: Return true (1) if the animal meets the filtering criteria. Otherwise, return false (0). */
-    
+    if (has_b(a->name)){
+        return 1;
+    } else if (a->age > 15) {
+        return 1;
+    }  else if (a->weight > 200){
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 int compare_animals(Animal *A, Animal *B) {
@@ -26,13 +38,38 @@ int compare_animals(Animal *A, Animal *B) {
              Return 0 if the animal pointed to by A is equal to the animal pointed to by B.
              Return a negative value if the animal pointed to by A is smaller than the animal pointed to by B.
              Else, return a positive value. */
+    if (strcmp(A->species,B->species) != 0){
+        //May need to change species to name
+        return strcmp(A->species,B->species);
+    } else if (A->age != B->age){
+        return A->age - B->age;
+    } else {
+        return strcmp(A->name,B->name);
+    }
+}
 
+void swap(Animal *a, Animal *b){
+    Animal temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 void sort_animals(Animal *arr, int size) {
     /* TODO: Sort the animals stored in the array arr using Bubble Sort. 
              Your implementation must call the function compare_animals(). */
-
+    int swapped;
+    for (int i = 0; i < size - 1; i++){
+        swapped = 0;
+        for (int j = 0; j < size -1 -i; j++){
+            if (compare_animals(&arr[j], &arr[j + 1]) > 0){
+                swap(&arr[j], &arr[j + 1]);
+                swapped = 1;
+            }
+        }
+        //If no swapps occured, then break
+        if (swapped == 0)
+            break;
+    }
 }
 
 int main() {

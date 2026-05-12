@@ -23,8 +23,9 @@ int main() {
                 You may wish to consume any leftover newline character before reading your string using scanf(" ");
              If allocation is not successful, print "Memory allocation failed!" and exit with a return value of 1
              Tip: do not forget to free any memory that you allocated.
-              */
-             
+    */
+
+    
 
     printf("Number of vowels: %d\n", vowelCount);
 
