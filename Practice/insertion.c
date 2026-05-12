@@ -1,5 +1,9 @@
-# CSE-13
-Programs for CSE-13s class Spring 2026
+#include <stdio.h>
+
+int main(){
+
+    return 0;
+}
 
 void insertion_sort(int num, int n){
     for (int i = 1; i < n; i++){
